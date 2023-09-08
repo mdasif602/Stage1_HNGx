@@ -14,7 +14,18 @@ app.get('/api', (req, res) => {
 
   // Get current UTC time
   const now = new Date();
-  const utcTime = new Date(now.getTime() + (now.getTimezoneOffset() * 60000)).toISOString();
+
+  // Extract the date and time components
+    const year = now.getUTCFullYear();
+    const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(now.getUTCDate()).padStart(2, '0');
+    const hours = String(now.getUTCHours()).padStart(2, '0');
+    const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+    const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+
+    // Format the UTC time as "yyyy-MM-ddTHH:mm:ssZ"
+    const utcTime = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
+
 
   // Get GitHub URL of the file being run
   const githubFileUrl = `https://github.com/mdasif602/Stage1_HNGx/blob/main/index.js`;
