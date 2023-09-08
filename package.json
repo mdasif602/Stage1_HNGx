@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "express": "^4.18.2"
-  }
-  "license": "ISC"
+  },
+  "license": "ISC",
   "type": "module",
   "exports": {
     "./index.js": "./index.js"
