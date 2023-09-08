@@ -17,10 +17,10 @@ app.get('/api', (req, res) => {
   const utcTime = new Date(now.getTime() + (now.getTimezoneOffset() * 60000)).toISOString();
 
   // Get GitHub URL of the file being run
-  const githubFileUrl = `https://github.com/username/repo/blob/main/app.js`;
+  const githubFileUrl = `https://github.com/mdasif602/Stage1_HNGx/blob/main/index.js`;
 
   // Get GitHub URL of the full source code
-  const githubRepoUrl = 'https://github.com/username/repo';
+  const githubRepoUrl = 'https://github.com/mdasif602/Stage1_HNGx';
 
   const response = {
     slack_name,
